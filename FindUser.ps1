@@ -1,3 +1,5 @@
+Connect-AzAd
+
 $NotFound = 'First.Last@domain.com'
 
 $Name = $NotFound.split('@')[0]
@@ -17,8 +19,8 @@ Else {
     $results = Get-AZADuser -filter (DisplayName -like $TryName)
 }
 
-    write-host 'Not Found... $($Name), `t Potential matches... $($results)'
+    write-host "Not Found... $($Name), Potential matches... `n$($results)"
 
-Connect-AzAd
+
 
 
